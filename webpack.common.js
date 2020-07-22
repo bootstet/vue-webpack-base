@@ -1,4 +1,5 @@
 const path = require('path')
+const webpack = require('webpack')
 const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
@@ -8,10 +9,9 @@ module.exports = {
   mode: 'none',
   entry: './src/main.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name]-[hash].bundle.js',
     path: path.join(__dirname, 'dist'),
   },
-  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     // contentBase: './dist',
@@ -28,6 +28,12 @@ module.exports = {
       //       presets: ['@babel/preset-env']
       //     }
       //   }
+      // {
+      //   test: /.js$/,
+      //   use: {
+      //     loader: 'eslint-loader',
+      //   },
+      //   enforce: 'pre'
       // },
       {
         test: /.css$/,
@@ -79,5 +85,8 @@ module.exports = {
     }),
     new VueLoaderPlugin(),
 
+    // new webpack.DefinePlugin({
+    //   BASE_URL: '""'
+    // })
   ]
 }
