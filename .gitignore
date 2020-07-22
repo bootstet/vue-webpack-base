@@ -1,0 +1,7 @@
+node_modules/
+yarn-error.log
+miniprogram/
+.DS_Store
+$node_modules/
+.history/
+
