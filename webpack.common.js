@@ -83,8 +83,11 @@ module.exports = {
       },
       template: './public/index.html',
     }),
+<<<<<<< Updated upstream
     new VueLoaderPlugin(),
 
+=======
+>>>>>>> Stashed changes
     // new webpack.DefinePlugin({
     //   BASE_URL: '""'
     // })
