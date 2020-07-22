@@ -20,19 +20,21 @@ module.exports = {
   },
   module: {
     rules: [
-      {
-        test: /.js$/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: ['@babel/preset-env']
-          }
-        }
-      },
+      // {
+      //   test: /.js$/,
+      //   use: {
+      //     loader: 'babel-loader',
+      //     options: {
+      //       presets: ['@babel/preset-env']
+      //     }
+      //   }
+      // },
       {
         test: /.css$/,
         use: {
-          loader: 'url-loader',
+          loader: 'style-loader',
+          loader: 'css-loader',
+          // loader: 'url-loader',
           // options: {
             // limit: 10 * 1024
           // }
@@ -68,7 +70,6 @@ module.exports = {
   },
   plugins: [
     // new CleanWebpackPlugin(),
-    new VueLoaderPlugin(),
     new HtmlWebpackPlugin({
       title: 'webpack-vue',
       meta: {
@@ -76,5 +77,7 @@ module.exports = {
       },
       template: './public/index.html',
     }),
+    new VueLoaderPlugin(),
+
   ]
 }

@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "echo \"请使用 Webpack Dev Server 实现此任务\"",
-    "build": "echo \"请使用 Webpack 实现此任务\"",
-    "lint": "echo \"请使用 ESLint 实现此任务\"",
-    "dev": "webpack  --config webpack.dev.js",
+    "build": "webpack  --config webpack.dev.js",
+    "lint": "eslint",
     "start": "webpack-dev-server --config webpack.dev.js --open"
   },
-  "dependencies": {},
+  "dependencies": {
+  },
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
@@ -21,8 +21,8 @@
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
     "file-loader": "^4.2.0",
-    "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "html-loader": "^1.1.0",
     "less": "^3.12.2",
     "style-loader": "^1.2.1",
     "style-resources-loader": "^1.3.3",
