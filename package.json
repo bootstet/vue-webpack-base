@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "serve": "echo \"请使用 Webpack Dev Server 实现此任务\"",
-    "lint": "eslint",
+    "lint": "echo \"elint\"",
     "build": "webpack  --config webpack.prod.js",
-    "dev": "webpack-dev-server  --config webpack.dev.js",
     "start": "webpack-dev-server --config webpack.dev.js --open"
   },
   "dependencies": {
+    "eslint-plugin-vue-libs": "^4.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.10.5",
@@ -22,10 +22,17 @@
     "core-js": "^3.6.5",
     "css-loader": "^3.6.0",
     "eslint": "^7.5.0",
+    "eslint-config-standard": "^14.1.1",
     "eslint-loader": "^4.0.2",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-plugin-vue": "^6.2.2",
     "file-loader": "^4.2.0",
-    "html-webpack-plugin": "^4.3.0",
     "html-loader": "^1.1.0",
+    "html-webpack-plugin": "^4.3.0",
+    "husky": "^4.2.5",
     "less": "^3.12.2",
     "less-loader": "^6.2.0",
     "style-loader": "^1.2.1",
@@ -58,5 +65,10 @@
     "> 1%",
     "last 2 versions",
     "not dead"
-  ]
+  ],
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
 }

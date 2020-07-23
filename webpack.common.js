@@ -28,22 +28,18 @@ module.exports = {
       //       presets: ['@babel/preset-env']
       //     }
       //   }
-      // {
-      //   test: /.js$/,
-      //   use: {
-      //     loader: 'eslint-loader',
-      //   },
-      //   enforce: 'pre'
-      // },
+      {
+        test: /.js$/,
+        use: {
+          loader: 'eslint-loader',
+        },
+        enforce: 'pre'
+      },
       {
         test: /.css$/,
         use: {
           loader: 'style-loader',
           loader: 'css-loader',
-          // loader: 'url-loader',
-          // options: {
-            // limit: 10 * 1024
-          // }
         }
       },
       {
@@ -83,11 +79,7 @@ module.exports = {
       },
       template: './public/index.html',
     }),
-<<<<<<< Updated upstream
     new VueLoaderPlugin(),
-
-=======
->>>>>>> Stashed changes
     // new webpack.DefinePlugin({
     //   BASE_URL: '""'
     // })
