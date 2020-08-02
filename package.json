@@ -6,7 +6,7 @@
     "serve": "echo \"请使用 Webpack Dev Server 实现此任务\"",
     "lint": "eslint ./src",
     "build": "webpack  --config webpack.prod.js",
-    "start": "webpack-dev-server --config webpack.dev.js --open",
+    "start": "webpack-dev-server --config webpack.dev.js --open --progress --colors",
     "precommit": "lint-staged"
   },
   "dependencies": {
@@ -42,6 +42,7 @@
     "url-loader": "^4.1.0",
     "vue": "^2.6.11",
     "vue-loader": "^15.9.3",
+    "vue-router": "^3.3.4",
     "vue-style-loader": "^4.1.2",
     "vue-template-compiler": "^2.6.11",
     "webpack": "^4.43.0",
@@ -77,6 +78,9 @@
     "*.js": [
       "eslint",
       "git add"
+    ],
+    "*.{js.js}": [
+      "eslint --fix"
     ]
   }
 }

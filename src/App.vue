@@ -2,18 +2,23 @@
   <div id="app">
     <!-- <img alt="Vue logo" :src='require("./assets/logo.png")' > -->
     <img alt="Vue logo" src='./assets/logo.png' >
-    <HelloWorld msg="Welcome to Your Vue.js App！！！！ji"/>
+    <!-- <StudyContainer msg="vue Study"/> -->
+    <router-view></router-view>
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App！！！！ji"/> -->
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import StudyContainer from './components/StudyContainer.vue'
+// eslint-disable-next-line no-unused-vars
 import logo from './assets/logo.png'
 
 export default {
   name: 'App',
-    components: {
-    HelloWorld
+  components: {
+    HelloWorld,
+    StudyContainer
   }
 }
 </script>
